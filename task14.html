@@ -1,0 +1,41 @@
+<html>
+<head>
+    <title>Sort the String</title>
+    <style>
+        body {
+            margin-left: 50px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <p>Enter the String: 
+        <input type="text" id="inputStr">
+    </p>
+    <button onclick="sortString()">Sort</button>
+    <p>Output: <span id="output"></span></p>
+    <script>
+        function sortString() {
+            let inputStr = document.getElementById('inputStr').value;
+            let sortedStr = sortStringAlphabetically(inputStr);
+            document.getElementById("output").innerText = sortedStr;
+        }
+
+        function sortStringAlphabetically(inputString) {
+            // Convert the input string to an array of characters
+            var charArray = inputString.split('');
+            
+            // Sort the array of characters in alphabetical order
+            charArray.sort();
+            
+            // Join the sorted characters back into a string
+            var sortedString = charArray.join('');
+            
+            return sortedString;
+        }
+    </script>
+</body>
+</html>
+
+
+
